@@ -11,7 +11,7 @@
 class TeamsForm extends BaseTeamsForm {
 
     public function configure() {
-        $this->useFields(array("id", "name", "shorthandle", "flag", "link"));
+        $this->useFields(array("id", "name", "shorthandle", "flag", "logo", "link"));
 
         $flags = sfConfig::get("app_flag_team" . ((sfContext::getInstance()->getUser()->getCulture() != "fr") ? "_en" : ""));
         $aFlags = array();
