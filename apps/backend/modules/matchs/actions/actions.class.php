@@ -447,11 +447,13 @@ class matchsActions extends sfActions
                 if ($match->getTeamA()->exists()) {
                     $match->setTeamAName($match->getTeamA()->getName());
                     $match->setTeamAFlag($match->getTeamA()->getFlag());
+                    $match->setTeamALogo($match->getTeamA()->getLogo());
                 }
 
                 if ($match->getTeamB()->exists()) {
                     $match->setTeamBName($match->getTeamB()->getName());
                     $match->setTeamBFlag($match->getTeamB()->getFlag());
+                    $match->setTeamBLogo($match->getTeamB()->getLogo());
                 }
 
                 $side = $request->getPostParameter("side");
