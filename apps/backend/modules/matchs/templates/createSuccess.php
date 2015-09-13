@@ -170,7 +170,7 @@
         <div class="modal-body" style="max-height: 0%;">
             <?php foreach ($form as $name => $widget): ?>
                 <?php if ($widget->isHidden()) continue; ?>
-                <?php if (in_array($name, array("team_a_flag", "team_b_flag", "team_a_name", "team_b_name"))) continue; ?>
+                <?php if (in_array($name, array("team_a_flag", "team_b_flag", "team_a_logo", "team_b_logo", "team_a_name", "team_b_name"))) continue; ?>
                 <?php if ($name == "overtime_startmoney" || $name == "overtime_max_round"): ?>
                     <div class="control-group validate-field input-append" id="<?php echo $name; ?>">
                         <div class="alert alert-info">
@@ -203,6 +203,9 @@
                                     <span class="validate-field">
                                         <?php echo $form["team_a_flag"]->render(); ?>
                                     </span>
+                                    <span class="validate-field">
+                                        <?php echo $form["team_a_logo"]->render(array("placeholder" => "Team Logo")); ?>
+                                    </span>
                                 </span>
                             <?php endif; ?>
                             <?php if ($name == "team_b"): ?>
@@ -212,6 +215,9 @@
                                     </span>
                                     <span class="validate-field">
                                         <?php echo $form["team_b_flag"]->render(); ?>
+                                    </span>
+                                    <span class="validate-field">
+                                        <?php echo $form["team_b_logo"]->render(array("placeholder" => "Team Logo")); ?>
                                     </span>
                                 </span>
                             <?php endif; ?>

@@ -7,6 +7,7 @@
             <th></th>
             <th><?php echo __("Name"); ?></th>
             <th><?php echo __("Shorthandle"); ?></th>
+            <th><?php echo __("Logo"); ?></th>
             <th><?php echo __("Team Link"); ?></th>
         </tr>
     </thead>
@@ -17,6 +18,7 @@
                 <td width="20" style="vertical-align:middle;"><i class="flag flag-<?php echo strtolower($team->getFlag()); ?>"></i></td>
                 <td width="250" style="vertical-align:middle;"><?php echo $team->getName(); ?></td>
                 <td width="200" style="vertical-align:middle;"><?php echo $team->getShorthandle(); ?></td>
+                <td width="30" style="vertical-align:middle;"><?php echo $team->getLogo(); ?></td>
                 <?php if ($team->getLink() != ""): ?>
                     <td width="200" style="vertical-align:middle;"><a href="<?php echo $team->getLink(); ?>" target="_blank"><?php echo __("Link"); ?></a></td>
                 <?php else: ?>
