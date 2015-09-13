@@ -17,6 +17,7 @@
  * @method varchar             getName()           Returns the current record's "name" value
  * @method varchar             getShorthandle()    Returns the current record's "shorthandle" value
  * @method varchar             getFlag()           Returns the current record's "flag" value
+ * @method varchar             getLogo()           Returns the current record's "logo" value
  * @method varchar             getLink()           Returns the current record's "link" value
  * @method Doctrine_Collection getMatchs()         Returns the current record's "Matchs" collection
  * @method Doctrine_Collection getTeamsInSeasons() Returns the current record's "TeamsInSeasons" collection
@@ -58,6 +59,11 @@ abstract class BaseTeams extends sfDoctrineRecord
              'type' => 'varchar',
              'notnull' => true,
              'length' => 2,
+             ));
+        $this->hasColumn('logo', 'varchar', 5, array(
+             'type' => 'varchar',
+             'notnull' => false,
+             'length' => 5,
              ));
         $this->hasColumn('link', 'varchar', 100, array(
              'type' => 'varchar',
