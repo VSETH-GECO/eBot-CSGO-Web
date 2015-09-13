@@ -8,9 +8,11 @@ Matchs:
     season_id: { type: integer(20) }
     team_a: { type: integer(20) }
     team_a_flag: { type: varchar(2) }
+    team_a_logo: { type: varchar(5) }
     team_a_name: { type: varchar(25) }
     team_b: { type: integer(20) }
     team_b_flag: { type: varchar(2) }
+    team_b_logo: { type: varchar(5) }
     team_b_name: { type: varchar(25) }
     status: { type: integer(2) }
     is_paused: { type: boolean }
@@ -272,6 +274,7 @@ Teams:
     name: { type: varchar(50), notnull: true }
     shorthandle: { type: varchar(50), notnull: true }
     flag: { type: varchar(2), notnull: true }
+    logo: { type: varchar(5) }
     link: { type: varchar(100) }
 
 Seasons:
