@@ -11,9 +11,11 @@
  * @property integer $season_id
  * @property integer $team_a
  * @property varchar $team_a_flag
+ * @property varchar $team_a_logo
  * @property varchar $team_a_name
  * @property integer $team_b
  * @property varchar $team_b_flag
+ * @property varchar $team_b_logo
  * @property varchar $team_b_name
  * @property integer $status
  * @property boolean $is_paused
@@ -59,9 +61,11 @@
  * @method integer             getSeasonId()                    Returns the current record's "season_id" value
  * @method integer             getTeamA()                       Returns the current record's "team_a" value
  * @method varchar             getTeamAFlag()                   Returns the current record's "team_a_flag" value
+ * @method varchar             getTeamALogo()                   Returns the current record's "team_a_logo" value
  * @method varchar             getTeamAName()                   Returns the current record's "team_a_name" value
  * @method integer             getTeamB()                       Returns the current record's "team_b" value
  * @method varchar             getTeamBFlag()                   Returns the current record's "team_b_flag" value
+ * @method varchar             getTeamBLogo()                   Returns the current record's "team_b_logo" value
  * @method varchar             getTeamBName()                   Returns the current record's "team_b_name" value
  * @method integer             getStatus()                      Returns the current record's "status" value
  * @method boolean             getIsPaused()                    Returns the current record's "is_paused" value
@@ -106,9 +110,11 @@
  * @method Matchs              setSeasonId()                    Sets the current record's "season_id" value
  * @method Matchs              setTeamA()                       Sets the current record's "team_a" value
  * @method Matchs              setTeamAFlag()                   Sets the current record's "team_a_flag" value
+ * @method Matchs              setTeamALogo()                   Sets the current record's "team_a_logo" value
  * @method Matchs              setTeamAName()                   Sets the current record's "team_a_name" value
  * @method Matchs              setTeamB()                       Sets the current record's "team_b" value
  * @method Matchs              setTeamBFlag()                   Sets the current record's "team_b_flag" value
+ * @method Matchs              setTeamBLogo()                   Sets the current record's "team_b_logo" value
  * @method Matchs              setTeamBName()                   Sets the current record's "team_b_name" value
  * @method Matchs              setStatus()                      Sets the current record's "status" value
  * @method Matchs              setIsPaused()                    Sets the current record's "is_paused" value
@@ -184,6 +190,10 @@ abstract class BaseMatchs extends sfDoctrineRecord
              'type' => 'varchar',
              'length' => 2,
              ));
+        $this->hasColumn('team_a_logo', 'varchar', 5, array(
+             'type' => 'varchar',
+             'length' => 5,
+             ));
         $this->hasColumn('team_a_name', 'varchar', 25, array(
              'type' => 'varchar',
              'length' => 25,
@@ -195,6 +205,10 @@ abstract class BaseMatchs extends sfDoctrineRecord
         $this->hasColumn('team_b_flag', 'varchar', 2, array(
              'type' => 'varchar',
              'length' => 2,
+             ));
+        $this->hasColumn('team_b_logo', 'varchar', 5, array(
+             'type' => 'varchar',
+             'length' => 5,
              ));
         $this->hasColumn('team_b_name', 'varchar', 25, array(
              'type' => 'varchar',
