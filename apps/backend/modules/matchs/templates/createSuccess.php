@@ -172,7 +172,7 @@
                 <?php if ($widget->isHidden()) continue; ?>
                 <?php if (in_array($name, array("team_a_flag", "team_b_flag", "team_a_name", "team_b_name"))) continue; ?>
                 <?php if ($name == "overtime_startmoney" || $name == "overtime_max_round"): ?>
-                    <div class="control-group validate-field input-append" style="display:none;" id="<?php echo $name; ?>">
+                    <div class="control-group validate-field input-append" id="<?php echo $name; ?>">
                         <div class="alert alert-info">
                             <?php echo $widget->renderLabel(null, array("class" => "control-label")); ?>
                             <div class="controls">
