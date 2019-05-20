@@ -35,6 +35,8 @@
  * @property integer $nb5kill
  * @property integer $pluskill
  * @property integer $firstkill
+ * @property integer $damage_given
+ * @property integer $damage_taken
  * @property Matchs $Match
  * @property Maps $Map
  * @property Doctrine_Collection $PlayersSnapshot
@@ -72,6 +74,8 @@
  * @method integer             getNb5kill()         Returns the current record's "nb5kill" value
  * @method integer             getPluskill()        Returns the current record's "pluskill" value
  * @method integer             getFirstkill()       Returns the current record's "firstkill" value
+ * @method integer             getDamageGiven()     Returns the current record's "damage_given" value
+ * @method integer             getDamageTaken()     Returns the current record's "damage_taken" value
  * @method Matchs              getMatch()           Returns the current record's "Match" value
  * @method Maps                getMap()             Returns the current record's "Map" value
  * @method Doctrine_Collection getPlayersSnapshot() Returns the current record's "PlayersSnapshot" collection
@@ -108,6 +112,8 @@
  * @method Players             setNb5kill()         Sets the current record's "nb5kill" value
  * @method Players             setPluskill()        Sets the current record's "pluskill" value
  * @method Players             setFirstkill()       Sets the current record's "firstkill" value
+ * @method Players             setDamageGiven()     Sets the current record's "damage_given" value
+ * @method Players             setDamageTaken()     Sets the current record's "damage_taken" value
  * @method Players             setMatch()           Sets the current record's "Match" value
  * @method Players             setMap()             Sets the current record's "Map" value
  * @method Players             setPlayersSnapshot() Sets the current record's "PlayersSnapshot" collection
@@ -282,6 +288,18 @@ abstract class BasePlayers extends sfDoctrineRecord
              ));
         $this->hasColumn('firstkill', 'integer', 5, array(
              'type' => 'integer',
+             'default' => 0,
+             'length' => 5,
+             ));
+        $this->hasColumn('damage_given', 'integer', 5, array(
+             'type' => 'integer',
+             'notnull' => true,
+             'default' => 0,
+             'length' => 5,
+             ));
+        $this->hasColumn('damage_taken', 'integer', 5, array(
+             'type' => 'integer',
+             'notnull' => true,
              'default' => 0,
              'length' => 5,
              ));

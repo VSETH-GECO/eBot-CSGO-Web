@@ -113,6 +113,8 @@ Players:
     nb5kill: { type: integer(5), default: 0 }
     pluskill: { type: integer(5), default: 0 }
     firstkill: { type: integer(5), default: 0 }
+    damage_given: { type: integer(5), notnull: true, default: 0 }
+    damage_taken: { type: integer(5), notnull: true, default: 0 }
   relations:
     Match: { class: Matchs, onDelete: CASCADE, local: match_id, foreign: id }
     Map: { class: Maps, onDelete: CASCADE, local: map_id, foreign: id }
@@ -147,6 +149,8 @@ PlayersSnapshot:
     pluskill: { type: integer(5), default: 0 }
     firstkill: { type: integer(5), default: 0 }
     round_id: { type: integer(5) }
+    damage_given: { type: integer(5), notnull: true, default: 0 }
+    damage_taken: { type: integer(5), notnull: true, default: 0 }
   relations:
     Player: { class: Players, onDelete: CASCADE, local: player_id, foreign: id }
 

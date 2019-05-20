@@ -31,6 +31,8 @@
  * @property integer $pluskill
  * @property integer $firstkill
  * @property integer $round_id
+ * @property integer $damage_given
+ * @property integer $damage_taken
  * @property Players $Player
  * 
  * @method integer         getId()           Returns the current record's "id" value
@@ -59,6 +61,8 @@
  * @method integer         getPluskill()     Returns the current record's "pluskill" value
  * @method integer         getFirstkill()    Returns the current record's "firstkill" value
  * @method integer         getRoundId()      Returns the current record's "round_id" value
+ * @method integer         getDamageGiven()  Returns the current record's "damage_given" value
+ * @method integer         getDamageTaken()  Returns the current record's "damage_taken" value
  * @method Players         getPlayer()       Returns the current record's "Player" value
  * @method PlayersSnapshot setId()           Sets the current record's "id" value
  * @method PlayersSnapshot setPlayerId()     Sets the current record's "player_id" value
@@ -86,6 +90,8 @@
  * @method PlayersSnapshot setPluskill()     Sets the current record's "pluskill" value
  * @method PlayersSnapshot setFirstkill()    Sets the current record's "firstkill" value
  * @method PlayersSnapshot setRoundId()      Sets the current record's "round_id" value
+ * @method PlayersSnapshot setDamageGiven()  Sets the current record's "damage_given" value
+ * @method PlayersSnapshot setDamageTaken()  Sets the current record's "damage_taken" value
  * @method PlayersSnapshot setPlayer()       Sets the current record's "Player" value
  * 
  * @package    PhpProject1
@@ -233,6 +239,18 @@ abstract class BasePlayersSnapshot extends sfDoctrineRecord
              ));
         $this->hasColumn('round_id', 'integer', 5, array(
              'type' => 'integer',
+             'length' => 5,
+             ));
+        $this->hasColumn('damage_given', 'integer', 5, array(
+             'type' => 'integer',
+             'notnull' => true,
+             'default' => 0,
+             'length' => 5,
+             ));
+        $this->hasColumn('damage_taken', 'integer', 5, array(
+             'type' => 'integer',
+             'notnull' => true,
+             'default' => 0,
              'length' => 5,
              ));
     }

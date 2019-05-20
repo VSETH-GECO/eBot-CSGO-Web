@@ -9,6 +9,7 @@
  * @property varchar $name
  * @property varchar $shorthandle
  * @property varchar $flag
+ * @property varchar $logo
  * @property varchar $link
  * @property Doctrine_Collection $Matchs
  * @property Doctrine_Collection $TeamsInSeasons
@@ -25,6 +26,7 @@
  * @method Teams               setName()           Sets the current record's "name" value
  * @method Teams               setShorthandle()    Sets the current record's "shorthandle" value
  * @method Teams               setFlag()           Sets the current record's "flag" value
+ * @method Teams               setLogo()           Sets the current record's "logo" value
  * @method Teams               setLink()           Sets the current record's "link" value
  * @method Teams               setMatchs()         Sets the current record's "Matchs" collection
  * @method Teams               setTeamsInSeasons() Sets the current record's "TeamsInSeasons" collection
@@ -62,7 +64,6 @@ abstract class BaseTeams extends sfDoctrineRecord
              ));
         $this->hasColumn('logo', 'varchar', 5, array(
              'type' => 'varchar',
-             'notnull' => false,
              'length' => 5,
              ));
         $this->hasColumn('link', 'varchar', 100, array(
