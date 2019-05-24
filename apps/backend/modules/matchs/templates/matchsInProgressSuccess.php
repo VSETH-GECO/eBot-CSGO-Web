@@ -397,7 +397,7 @@
                                                 <?php endif; ?>
                                             </table>
                                         </li>
-                                        <li><textarea onclick="this.focus();this.select()" readonly id="connectCopy" style="width:170px; font-size:smaller; margin:5px;">connect <?php echo $match->getIp(); ?>; password <?php echo $match->getConfigPassword(); ?></textarea></li>
+                                        <li><textarea onclick="this.focus();this.select()" readonly id="connectCopy" style="width:170px; font-size:smaller; margin:5px;">connect <?php echo $match->getIp(); ?>; password <?php echo $match->getConfigPassword(); ?>; clear</textarea></li>
                                     </ul>
                                 </div>
                                 <a href="<?php echo url_for("matchs_view", $match); ?>"><button class="btn btn-inverse btn-mini"><?php echo __("Show"); ?></button></a>

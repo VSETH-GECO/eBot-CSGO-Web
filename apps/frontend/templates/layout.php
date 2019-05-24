@@ -46,9 +46,9 @@
                 }
                 
                 loadingSocketIo = true;
-                $.getScript("http://"+socketIoAddress+"/socket.io/socket.io.js", function(){
-                    socket = io.connect("http://"+socketIoAddress);
-                    socket.on('connect', function(){ 
+                $.getScript(<?php echo sfConfig::get("app_ebot_ssl")?"\"https://\"":"\"http://\"";?>+socketIoAddress+"/socket.io/socket.io.js", function(){
+                    socket = io.connect(<?php echo sfConfig::get("app_ebot_ssl")?"\"https://\"":"\"http://\"";?>+socketIoAddress);
+                    socket.on('connect', function(){
                         socketIoLoaded = true;
                         loadingSocketIo = false;
                         if (typeof callback == "function") {
