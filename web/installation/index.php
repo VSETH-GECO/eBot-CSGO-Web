@@ -20,7 +20,7 @@
         <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
         <script type="text/javascript" src="/js/jquery.datatable.min.js"></script>
         <script type="text/javascript" src="/js/datatable.bootstrap.js"></script>
-        <script type="text/javascript" src="/js/heatmap.js"></script>
+        <script type="text/javascript" src="/js/hmap.js"></script>
         <script type="text/javascript" src="/js/raphael-min.js"></script>
         <script type="text/javascript" src="/js/jquery.iphone-switch.js"></script>
         <style type="text/css">
